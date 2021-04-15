@@ -4,18 +4,28 @@
 int main(){
     
     char nome[256];
-    char sobrenome[256];
-    int anoNascimento;
     int idade;
 
-    printf("Qual seu nome?\n");
+    printf("Ola! Qual seu nome?\n");
+    scanf("%s",&nome);
 
-    scanf("%s",nome);
-
-    printf("Show de bola %s... Qual sua idade?",nome);
+    printf("\nQual sua idade\n");
     scanf("%d",&idade);
-    printf("Muito bom! O %s tem %d anos",nome,idade);
 
+    printf("Nome: %s\nIdade: %d\n",nome,idade);
+
+    printf("\nAguarde enquanto lemos seus dados...");
+
+    printf("A primeira letra do seu nome: %c",nome[0]);
+    if (idade >= 60){
+        printf("\nIdoso");
+    }else if(idade >= 18 ){
+        printf("\nAdulto");
+    }else if (idade >= 12){
+        printf("\nAdolescente");
+    }else{
+        printf("\nCrianca");
+    }
     return 0;
 
 }
