@@ -3,12 +3,17 @@
 
 int main(){
     
-    int anoNascimento = 2001;
-    int anoAtual = 2021;
+    int horaCinema = 20;
+    int horaAtual = 20;
 
-    int resultado = (anoAtual - anoNascimento);
-
-    printf("Daniel tem %d anos", resultado); 
+    //Posso entrar no cinema?
+    if(horaAtual < horaCinema + 30){
+        printf("Passou");
+    }else if(horaAtual > horaCinema - 30){
+        printf("Porta nem abriu");
+    }else{
+        printf("O horario esta certo");
+    }
 
     return 0;
 
