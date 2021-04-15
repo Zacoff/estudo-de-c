@@ -3,18 +3,20 @@
 
 int main(){
     
-    int horaCinema = 20;
-    int horaAtual = 20;
+    int contador = 1;
+    int limit = 10;
 
-    //Posso entrar no cinema?
-    if(horaAtual < horaCinema + 30){
-        printf("Passou");
-    }else if(horaAtual > horaCinema - 30){
-        printf("Porta nem abriu");
-    }else{
-        printf("O horario esta certo");
+    while(contador <= limit){
+        printf("Estamos no primeiro loop\n");
+        if(contador == 3){
+            int contador2 = 5;
+            while(contador2 > 0){
+                printf("Estamos no segundo loop\n");
+                contador2--;
+            }
+        }
+        contador++;
     }
-
     return 0;
 
 }
