@@ -3,20 +3,19 @@
 
 int main(){
     
-    int contador = 1;
-    int limit = 10;
+    char nome[256];
+    char sobrenome[256];
+    int anoNascimento;
+    int idade;
 
-    while(contador <= limit){
-        printf("Estamos no primeiro loop\n");
-        if(contador == 3){
-            int contador2 = 5;
-            while(contador2 > 0){
-                printf("Estamos no segundo loop\n");
-                contador2--;
-            }
-        }
-        contador++;
-    }
+    printf("Qual seu nome?\n");
+
+    scanf("%s",nome);
+
+    printf("Show de bola %s... Qual sua idade?",nome);
+    scanf("%d",&idade);
+    printf("Muito bom! O %s tem %d anos",nome,idade);
+
     return 0;
 
 }
