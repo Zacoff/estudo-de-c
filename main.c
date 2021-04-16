@@ -3,28 +3,50 @@
 
 int main(){
     
-    char nome[256];
-    int idade;
+    char player[256];
+    char player2[256];
 
-    printf("Ola! Qual seu nome?\n");
-    scanf("%s",&nome);
+    printf("Player 1, sua vez...");
+    scanf("%s",&player);
 
-    printf("\nQual sua idade\n");
-    scanf("%d",&idade);
+    printf("Player 2,sua vez...");
+    scanf("%s",&player2);
 
-    printf("Nome: %s\nIdade: %d\n",nome,idade);
+    printf("\nAguarde, estamos calculando o resultado...");
 
-    printf("\nAguarde enquanto lemos seus dados...");
-
-    printf("A primeira letra do seu nome: %c",nome[0]);
-    if (idade >= 60){
-        printf("\nIdoso");
-    }else if(idade >= 18 ){
-        printf("\nAdulto");
-    }else if (idade >= 12){
-        printf("\nAdolescente");
-    }else{
-        printf("\nCrianca");
+    if(strcmp(player,"papel") == 0){
+            if(strcmp(player2,"papel") == 0){
+                printf("Empate");
+            }else if (strcmp(player2,"pedra") == 0){
+                printf("Player 1 ganhou");
+            }else if (strcmp(player2,"tesoura") == 0){
+                printf("Player 2 ganhou");
+            }else{
+                printf("Player 2 jogou errado");
+            }
+    }else if (strcmp(player,"pedra") == 0){
+            if(strcmp(player2,"papel") == 0){
+                printf("Player 2 ganhou");
+            }else if (strcmp(player2,"pedra") == 0){
+                printf("Empate");
+            }else if (strcmp(player2,"tesoura") == 0){
+                printf("Player 1 ganhou");
+            }else{
+                printf("Player 2 jogou errado");
+            }
+    }else if (strcmp(player,"tesoura") == 0){
+            if(strcmp(player2,"papel") == 0){
+                printf("Empate");
+            }else if (strcmp(player2,"pedra") == 0){
+                printf("Player 1 ganhou");
+            }else if (strcmp(player2,"tesoura") == 0){
+                printf("Player 2 ganhou");
+            }else{
+                printf("Player 2 jogou errado");
+            }
+    }else
+    {
+        printf("Voce jogou errado");
     }
     return 0;
 
